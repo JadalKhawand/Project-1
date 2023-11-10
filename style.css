@@ -1,0 +1,20 @@
+p {
+  color: rgba(255, 255, 255, 0.982) 020;
+  font-size: 90px;
+}
+img {
+  height: 700px;
+  width: 1000px;
+  transform: rotate(0deg);
+}
+.firstheader {
+  color: rgb(0, 99, 186);
+  font-size: 100px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+body {
+  background-color: antiquewhite;
+}
+a {
+  font-size: 50px;
+}
