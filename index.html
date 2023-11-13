@@ -25,34 +25,28 @@
       font-size: 24px;
       font-weight: bold;
     }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    nav li {
+      margin: 20px;
+    }
+
+    nav a {
+      color: white;
+      font-size: 16px;
+    }
+
+    nav li:last-child a {
+      color: yellow;
+      text-transform: uppercase;
+    }
   </style>
-  <!-- session final-2 -->
-  <!-- Task: reset styles -->
-  <!-- Hint: set box-sizing to border-box, margin and padding to zero -->
 
-  <!-- session final-2 -->
-  <!-- Task: style the header element -->
-  <!-- Hint: set bg color to hex '333', give the header a padding of 20 pixels, and set its display property to flex -->
-  <!-- Hint: space the elements based on distance between them, and make sure all elements are vertically centered on an axis -->
 
-  <!-- session final-2 -->
-  <!-- Task: style the element with class 'logo' with white hex color, font size of 24 pixels, and a bold font -->
-
-  <!-- session final-2 -->
-  <!-- Task: style the unordered list inside nav element -->
-  <!-- Hint: set its display property to flex, and remove any list styles -->
-
-  <!-- session final-2 -->
-  <!-- Task: style the list items inside nav element -->
-  <!-- Hint: set the margin to 20 pixels -->
-
-  <!-- session final-2 -->
-  <!-- Task: style the anchor tag inside nav element -->
-  <!-- Hint: set the color to white, and the font size to 16 pixels -->
-
-  <!-- session final-2 -->
-  <!-- Task: style the anchor tag inside the last list item -->
-  <!-- Hint: set the color to yellow, and use CSS to make all its letters display in uppercase -->
 
   <!-- session final-2 -->
   <!-- Task: style the header for screens with width under 600 pixels -->
@@ -71,6 +65,17 @@
   <!-- session final-2 -->
   <!-- Task: add the HTML structure of the page -->
   <!-- Hint: structure: <header> <div class="logo">Logo</div> <nav> <ul> <li><a>Home</a></li> <li><a>About</a></li> <li><a>Services</a></li> <li class="flicker-effect"><a>Contact</a></li> </ul> </nav> </header> -->
+  <header>
+    <div class="logo">Logo</div>
+    <nav>
+      <ul>
+        <li><a>Home</a></li>
+        <li><a>About</a></li>
+        <li><a>Services</a></li>
+        <li class="flicker-effect"><a>Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 </body>
 
 </html>
