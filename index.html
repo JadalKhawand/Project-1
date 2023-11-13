@@ -18,6 +18,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-direction: column;
     }
 
     .logo {
@@ -29,10 +30,12 @@
     nav ul {
       display: flex;
       list-style: none;
+      flex-direction: column;
     }
 
     nav li {
-      margin: 20px;
+      margin-left: 0px;
+      margin-bottom: 10px;
     }
 
     nav a {
@@ -44,21 +47,26 @@
       color: yellow;
       text-transform: uppercase;
     }
+
+    @keyframes flicker {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .flicker-effect {
+      animation: flicker is infinite;
+    }
   </style>
 
 
 
-  <!-- session final-2 -->
-  <!-- Task: style the header for screens with width under 600 pixels -->
-  <!-- Hint: change the flex direction of the header element to column -->
-  <!-- Hint: change the flex direction of unordered list inside of the nav element to column -->
-  <!-- Hint: change the margins on the list item inside of the nav element, to have a margin of zero pixels on the left, and a margin of 10 pixels on the bottom -->
 
-  <!-- session final-2 -->
-  <!-- Task: style the element with class 'flicker-effect' to have animation named 'flicker' over 1 second and with infinite iterations -->
 
-  <!-- session final-2 -->
-  <!-- Task: create an animation named 'flicker' that switches the opacity from 0 to 1 -->
 </head>
 
 <body>
