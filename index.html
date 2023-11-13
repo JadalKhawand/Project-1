@@ -79,7 +79,7 @@
       - style immediate child elements inside elements with classes 'portfolio__row', 'stats__row', and 'blogs__row' to have width set to 450 pixels, and the text aligned in the center
     -->
   <style>
-    .blogs__row {
+    .parent>.child .portfolio__row {
       width: 450px;
       text-align: center;
     }
@@ -176,7 +176,21 @@
       - style the elements with class 'h3' inside the element with class 'work__description' to have a font size of 18 pixels, and a margin of 5 pixels on the bottom
       - style the p inside the element with class 'work__description' to have a font size of 14 pixels, and no margin on the bottom
     -->
+  <style>
+    .work__description {
+      text-align: center;
+    }
 
+    .work__description .h3 {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .work__description p {
+      font-size: 14px;
+      margin-top: 0;
+    }
+  </style>
   <!-- session final-3 -->
   <!-- Task:
       - style the elements with class 'social-media' to have a font size of 20 pixels
