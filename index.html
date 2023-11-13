@@ -79,7 +79,9 @@
       - style immediate child elements inside elements with classes 'portfolio__row', 'stats__row', and 'blogs__row' to have width set to 450 pixels, and the text aligned in the center
     -->
   <style>
-    .parent>.child .portfolio__row {
+    .portfolio__row>*,
+    .stats__row>*,
+    .blogs__row>* {
       width: 450px;
       text-align: center;
     }
@@ -207,6 +209,24 @@
       - create a functional class 'list-none' that sets list-style to none
       - create a functional class 'p-2' that sets padding to 0.5rem
     -->
+  <style>
+    .flex {
+      display: flex;
+    }
+
+    .justify-around {
+      justify-content: space-around;
+    }
+
+    .list-none {
+      list-style: none;
+
+    }
+
+    .p-2 {
+      padding: 0.5rem;
+    }
+  </style>
 </head>
 
 <body>
