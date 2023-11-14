@@ -13,12 +13,12 @@
     }
 
     header {
-      background-color: #333;
+      background-color: gray;
       padding: 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-direction: column;
+
     }
 
     .logo {
@@ -30,12 +30,11 @@
     nav ul {
       display: flex;
       list-style: none;
-      flex-direction: column;
+
     }
 
     nav li {
-      margin-left: 0px;
-      margin-bottom: 10px;
+      margin: 20px;
     }
 
     nav a {
@@ -44,48 +43,68 @@
     }
 
     nav li:last-child a {
-      color: yellow;
+      color: white;
       text-transform: uppercase;
-    }
-
-    @keyframes flicker {
-      0% {
-        opacity: 0;
-      }
-
-      100% {
-        opacity: 1;
-      }
-    }
-
-    .flicker-effect {
-      animation: flicker is infinite;
     }
   </style>
 
+  <style>
+    nav ul {
+      display: flex;
+      flex-direction: column;
+    }
 
+    nav ul {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        display: flex;
+        flex-direction: column;
+      }
+
+
+    }
+  </style>
+  <style>
+    .flicker-effect {
+      animation: colorChange 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes colorChange {
+      0% {
+        background-color: green;
+      }
+
+      50% {
+        background-color: black;
+      }
+
+      100% {
+        background-color: red;
+      }
+
+    }
+  </style>
 
 
 
 </head>
 
 <body>
-  <!-- session final-2 -->
-  <!-- Task: add the HTML structure of the page -->
-  <!-- Hint: structure: <header> <div class="logo">Logo</div> <nav> <ul> <li><a>Home</a></li> <li><a>About</a></li> <li><a>Services</a></li> <li class="flicker-effect"><a>Contact</a></li> </ul> </nav> </header> -->
   <header>
     <div class="logo">Logo</div>
     <nav>
       <ul>
-        <li><a>Home</a></li>
-        <li><a>About</a></li>
-        <li><a>Services</a></li>
-        <li class="flicker-effect"><a>Contact</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li class="flicker-effect"><a href="#">Contact</a></li>
       </ul>
     </nav>
   </header>
 </body>
 
 </html>
-homework-header.html
-Displaying homework-header.html.
