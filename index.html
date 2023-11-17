@@ -2,118 +2,144 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facebook Login</title>
   <style>
     * {
-      box-sizing: border-box;
-      margin: 0;
       padding: 0;
+      margin: 0;
     }
 
     body {
+      background-color: #f0f2f5;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    main {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       height: 100vh;
-      display: flex;
     }
 
-    .card {
-      width: 300px;
-      height: 500px;
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      width: 500px;
+      height: 600px;
+    }
+
+    .form {
+      background-color: white;
+      padding: 20px;
       border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.9);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      height: 200px;
     }
 
-    .card__header {
-      display: flex;
-      justify-content: space-between;
-      padding-top: 8px;
-      padding-bottom: 8px;
-      padding-left: 16px;
-      padding-right: 16px;
-    }
-
-    .card__image {
+    .form-input {
       width: 100%;
-      height: auto;
-      pointer-events: none;
+      margin-bottom: 15px;
     }
 
-    .card__content {
-      padding: 16px;
+    .form-input input {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
     }
 
-    .card__title {
-      font-size: 16px;
-      font-weight: bold;
-      margin-bottom: 8px;
-      position: relative;
+    .form-input input[type="submit"] {
+      background-color: #1877f2;
+      color: white;
+      cursor: pointer;
     }
 
-    .card__title::after {
-      content: attr(title);
-      position: absolute;
-      width: 140px;
-      opacity: 0;
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: white;
+      margin-top: 50px;
     }
 
-    .card__title:hover::after {
-      opacity: 1;
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
     }
 
-    .card__text {
-      font-size: 14px;
-      color: #666666;
-      margin-bottom: 16px;
+    nav li {
+      display: inline;
+      margin: 0 10px;
+      color: #65676b;
     }
 
-    .card__price {
-      font-size: 16px;
-      margin-top: 8px;
-      font-weight: bold;
+    .image img {
+
+      height: 100px;
     }
 
-    .card__button {
-      text-decoration: none;
-      background-color: #4caf50;
-      padding: 8px 16px;
-      transition: background-color 1s ease;
+    a:link {
+      color: blue;
+      font-size: smaller;
     }
 
-    .card__button:hover {
-      background-color: #45a049;
+    a:visited {
+      color: black;
     }
 
-    .card--dark {
-      background-color: #333333;
-      box-shadow: 1px 4px 8px red;
-      color: #cccccc;
-    }
-
-    .card--dark .card__button {
-      background-color: #1e824c;
-    }
-
-    .card--dark .card__button:hover {
-      color: #1a6c3d;
-    }
+    a:hover {
+      color: #a26100;
+      border: 3px inset #cccccc;
   </style>
 </head>
 
 <body>
-  <div class="card card--dark">
-    <img src="card-image.jpg" alt="Image" class="card__image" />
-    <span class="card__header">
-      <h2 class="card__title" title="Lorem ipsum title">Card Title</h2>
-      <p class="card__price">$19.99 per month</p>
-    </span>
-    <div class="card__content">
-      <p class="card__text">Lorem.</p>
-      <a href="#" class="card__button">Read More</a>
+
+  <main>
+    <div class="container">
+      <div class="image">
+        <img class="fb_logo _8ilh img" src="https://static.xx.fbcdn.net/rsrc.php/y1/r/4lCu2zih0ca.svg" alt="Facebook">
+      </div>
+
+      <div class="form">
+        <h3>Log in to Facebook</h3> <br>
+        <div class="form-input">
+          <input type="text" placeholder="Email" required="required">
+        </div>
+        <div class="form-input">
+          <input type="password" placeholder="Password" required="required">
+        </div>
+        <div class="form-input">
+          <input type="submit" value="Log in">
+        </div>
+
+        <div class="forget">
+          <a href="#">Forgotten account?</a> &nbsp;
+          <a href="#">Sign up for Facebook</a>
+        </div>
+      </div>
+
     </div>
-  </div>
+  </main>
+
+  <footer>
+    <nav>
+      <ul>
+        <li>Languages</li>
+        <li>Links</li>
+        <li>&copy; 2023 Facebook</li>
+      </ul>
+    </nav>
+  </footer>
+
 </body>
 
 </html>
