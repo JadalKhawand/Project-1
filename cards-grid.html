@@ -2,122 +2,212 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
   <style>
-    .card {
-      /* border: 1px red solid; */
-      width: 400px;
-      height: 300px;
-      border-radius: 40px;
-      overflow: hidden;
-      position: relative;
-
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .text {
-      color: red;
-      position: absolute;
-      left: 40px;
-      bottom: 30px;
-      /* margin: 20px; */
-      /* border: 1px red solid; */
-    }
-
-    .cards-grid {
-      /* border: 1px red solid; */
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-
-    }
-
-    .button {
-      margin-left: 10px;
-      margin-bottom: 20px;
-
+    body {
+      padding: 40px;
     }
   </style>
+
+  <style>
+    .card {
+      width: 300px;
+      height: 500px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.9);
+    }
+
+    .card__header {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    .card__image {
+      width: 100%;
+      height: auto;
+      pointer-events: none;
+    }
+
+    .card__content {
+      padding: 16px;
+    }
+
+    .card__title {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 8px;
+      position: relative;
+    }
+
+    .card__title::after {
+      content: attr(title);
+      position: absolute;
+      width: 140px;
+      opacity: 0;
+    }
+
+    .card__title:hover::after {
+      opacity: 1;
+    }
+
+    .card__text {
+      font-size: 14px;
+      color: #666666;
+      margin-bottom: 16px;
+    }
+
+    .card__price {
+      font-size: 16px;
+      margin-top: 8px;
+      font-weight: bold;
+    }
+
+    .card__button {
+      text-decoration: none;
+      background-color: #4caf50;
+      padding: 8px 16px;
+      transition: background-color 1s ease;
+    }
+
+    .card__button:hover {
+      background-color: #45a049;
+    }
+
+    .card--dark {
+      background-color: #333333;
+      box-shadow: 1px 4px 8px red;
+      color: #cccccc;
+    }
+
+    .card--dark .card__button {
+      background-color: #1e824c;
+    }
+
+    .card--dark .card__button:hover {
+      color: #1a6c3d;
+    }
+  </style>
+
+  <style>
+    #cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-gap: 20px;
+      justify-items: center;
+      align-items: center;
+    }
+  </style>
+  <!-- session final -->
+  <!-- Task: add styles for the element with ID 'cards-grid' -->
+  <!-- Hint: set display to grid, with columns template set to auto-fit with minmax 280px -> 1fr -->
+  <!-- Hint: add a gap of 20 pixels between the child elements -->
+  <!-- Hint: use justify-items: center; to center cards horizontally -->
+  <!-- Hint: use align-items: center; to center cards vertically -->
 </head>
 
 <body>
-  <div class="cards-grid">
-    <div class="card">
-      <div>
-        <img src="images\house.jpeg" alt="house image">
-      </div>
 
-      <div class="text">
-        <h1>Title of image</h1>
-        <button>View More</button>
-      </div>
-    </div>
+  <div id="cards-grid">
 
-    <div class="card">
-      <div>
-        <img src="images\house.jpeg" alt="house image">
-      </div>
-
-      <div class="text">
-        <h1>Title of image</h1>
-        <button>View More</button>
-      </div>
-    </div>
-
-    <div class="card">
-      <div>
-        <img src="images\house.jpeg" alt="house image">
-      </div>
-
-      <div class="text">
-        <h1>Title of image</h1>
-        <button>View More</button>
-      </div>
-    </div>
-
-    <div class="card">
-      <div>
-        <img src="images\house.jpeg" alt="house image">
-      </div>
-
-      <div class="text">
-        <h1>Title of image</h1>
-        <button>View More</button>
-      </div>
-    </div>
-
-    <div class="card">
-      <div>
-        <img src="images\house.jpeg" alt="house image">
-      </div>
-
-      <div class="text">
-        <h1>Title of image</h1>
-        <button>View More</button>
-      </div>
-    </div>
-
-    <div class="card">
-      <div>
-        <img src="images\house.jpeg" alt="house image">
-      </div>
-
-      <div class="text">
-        <h1>Title of image</h1>
-        <button>View More</button>
-      </div>
-    </div>
 
 
   </div>
+  <!-- session final -->
+  <!-- Task: add a script with the logic to populate element corresponding to selector '#cards-grid' with 20 cards -->
+  <!-- Hint: 
+      - get a reference of the container element '#cards-grid'
+      - run a loop for N times, N being the number of cards in this case, equal to 20
+      - in each iteration create a card, and append it to the container element
+      - a card should have the following structure: <div class="card"> <img /> <div> <h2 title="...">...</h2> <p>$...</p> <p>Description goes here...</p> <a>Read More</a> </div> </div>
+      - remeber to follow BEM convention when giving each element it's class
+    -->
 
+  <script>
+    // Get the container element with the id 'cards-grid'
+    var container = document.querySelector('#cards-grid');
+
+    // Loop to create and append cards
+    for (let i = 1; i <= 20; i++) {
+
+      // Create a card element
+      var card = document.createElement('div');
+      card.className = 'card'; // You can add additional classes for styling
+
+      var image = document.createElement('img');
+      image.className = 'card__image';
+      image.src = 'images/house.jpeg'; // Replace with the actual path to your image
+      image.alt = 'house Image'; // Provide alt text for accessibility
+
+      // Create card content
+      var cardContent = document.createElement('div');
+      cardContent.className = 'card__content';
+
+      // Create a title element
+      var title = document.createElement('h2');
+      title.className = 'card__title';
+      title.title = 'Card Title ' + i; // Set the title attribute
+      title.textContent = 'Card Title ' + i; // Set the text content
+
+      // Create a price element
+      var price = document.createElement('p');
+      price.className = 'card__price';
+      price.textContent = '$' + (Math.random() * 100).toFixed(2); // Generate random price
+
+      // Create a description element
+      var description = document.createElement('p');
+      description.className = 'card__text';
+      description.textContent = 'Description goes here...';
+
+      // Create a link element
+      var link = document.createElement('a');
+      link.className = 'card__button';
+      link.href = '#'; // Add your link URL
+      link.textContent = 'Read More';
+
+      // Append title, price, description, and link to card content
+      cardContent.appendChild(title);
+      cardContent.appendChild(price);
+      cardContent.appendChild(description);
+      cardContent.appendChild(link);
+
+      // Append card content to the card
+      card.appendChild(cardContent);
+
+      // Append the card to the container
+      container.appendChild(card);
+    }
+  </script>
+
+  <script>
+    // definitoin of the functions
+    // function alertHello() {
+    //   alert('hello')
+    //   console.log('user clicked the first card')
+    // }
+    // // getting HTML reference
+    // let card = document.querySelector('.card')
+    // // attaching logic to event
+    // card.addEventListener('click', alertHello)
+    for (let i = 0; i < 10; i++) {
+      console.log(i)
+    }
+
+
+
+  </script>
 </body>
 
 </html>
