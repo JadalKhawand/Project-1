@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .card {
+      border: 1px red solid;
+      width: 500px;
+      height: 300px;
+      border-radius: 40px;
+      overflow: hidden;
+      position: relative;
+
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .text {
+      color: red;
+      position: absolute;
+      left: 40px;
+      bottom: 30px;
+      /* margin: 20px; */
+      border: 1px red solid;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- will create a card -->
+  <div class="card">
+    <div>
+      <img src="images\house.jpeg" alt="house image">
+    </div>
+
+    <div class="text">
+      <h1>Title of image</h1>
+      <button>View More</button>
+    </div>
+  </div>
+  <!-- in this card i have two layers -->
+  <!-- The back layer will be an image  -->
+  <!-- the front layer will be overlay text elements -->
+</body>
+
+</html>
